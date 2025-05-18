@@ -1,0 +1,27 @@
+/* Preloader anfangs sichtbar */
+#preloader {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  
+  /* Fade-Out Effekt */
+  #preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Smooth Scrolling für Links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Optional: Logo leicht pulsieren lassen */
+  @keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-fade {
+    animation: fade 2.5s ease-in-out infinite;
+  }
+  

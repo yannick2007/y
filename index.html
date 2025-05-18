@@ -9,7 +9,7 @@
   <meta name="keywords" content="Yannick, Yannick Schatzl, Schatzl, yannickschatzl, persönliche Website" />
   <meta name="author" content="Yannick Schatzl" />
 
-  <!-- Open Graph Tags für Social Media Vorschau -->
+  <!-- Open Graph Tags -->
   <meta property="og:title" content="Yannick Schatzl" />
   <meta property="og:description" content="Willkommen auf der Website von Yannick Schatzl!" />
   <meta property="og:image" content="https://yannick-schatzl.com/assets/logo.svg" />
@@ -18,12 +18,58 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Externe CSS-Datei -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-  <div class="text-center">
-    <img src="assets/logo.svg" alt="Logo von Yannick Schatzl" class="mx-auto w-48 sm:w-64 md:w-72 lg:w-80 h-auto" />
-    <h1 class="text-2xl mt-6 font-semibold"></h1>
-    <p class="text-gray-600 mt-2"></p>
+<body class="bg-white text-gray-900">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <img src="assets/logo.svg" alt="Logo von Yannick Schatzl" class="w-48 sm:w-64 md:w-72 lg:w-80 h-auto animate-fade" />
   </div>
+
+  <!-- Hauptinhalt -->
+  <div id="main-content" class="hidden">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-40">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="font-semibold text-lg">Yannick Schatzl</div>
+        <nav class="space-x-6">
+          <a href="#section1" class="hover:underline transition">Titel 1</a>
+          <a href="#section2" class="hover:underline transition">Titel 2</a>
+          <a href="#section3" class="hover:underline transition">Titel 3</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Seiteninhalt -->
+    <main class="pt-24 space-y-32">
+      <section id="section1" class="min-h-screen flex items-center justify-center bg-gray-50" data-aos="fade-up">
+        <h1 class="text-4xl font-bold">Titel 1</h1>
+      </section>
+
+      <section id="section2" class="min-h-screen flex items-center justify-center bg-white" data-aos="fade-up">
+        <h1 class="text-4xl font-bold">Titel 2</h1>
+      </section>
+
+      <section id="section3" class="min-h-screen flex items-center justify-center bg-gray-50" data-aos="fade-up">
+        <h1 class="text-4xl font-bold">Titel 3</h1>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500 py-6">
+      © 2025 Yannick Schatzl
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
